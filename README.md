@@ -69,6 +69,6 @@ If you want to improve this project:
 
 ## License
 
-Specify the project license here [MIT License](LICENSE).
+The project is open source under [MIT License](LICENSE).
 
 
