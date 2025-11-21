@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RandomPhrase.MainPage">
+
+
+    <ScrollView>
+        <Grid Padding="20">
+            <!-- Background with different gradial colors  -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="MediumPurple" Offset="0.0" />
+                        <GradientStop Color="#020617" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <VerticalStackLayout
+                    Spacing="20"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="10">
+
+                    <!-- Card centrale -->
+                    <Frame
+                        HasShadow="True"
+                        CornerRadius="24"
+                        Padding="24"
+                        BackgroundColor="#020617"
+                        BorderColor="#334155">
+
+                        <VerticalStackLayout Spacing="20">
+
+                            <!-- Title -->
+                            <Label
+                                Text="Random Motivation Phrase"
+                                FontSize="26"
+                                FontAttributes="Bold"
+                                HorizontalTextAlignment="Center"
+                                TextColor="#e5e7eb"
+                                Margin="0,0,0,5" />
+
+                            <Label
+                                Text="Tap the button."
+                                FontSize="13"
+                                HorizontalTextAlignment="Center"
+                                TextColor="#9ca3af" />
+
+                            <!-- Motivational phrase -->
+                            <Frame
+                                BackgroundColor="#020617"
+                                BorderColor="#1f2937"
+                                CornerRadius="18"
+                                Padding="18">
+
+                                <Label
+                                    x:Name="TxtFrase"
+                                    Text="Click the button to get inspired."
+                                    FontSize="18"
+                                    TextColor="#f9fafb"
+                                    HorizontalTextAlignment="Center"
+                                    LineBreakMode="WordWrap" />
+                            </Frame>
+
+                            <!-- Button -->
+                            <Button
+                                x:Name="BtnRandom"
+                                Text="Click Me"
+                                Clicked="RandomButton_Clicked"
+                                TextColor="Black"
+                                />
+
+
+
+                            <Label 
+                                x:Name="TxtClickedTimes"
+                            Text=""
+                            TextColor="Gray" />
+
+                        </VerticalStackLayout>
+                    </Frame>
+
+                </VerticalStackLayout>
+            </Grid>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
